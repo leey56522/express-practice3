@@ -22,9 +22,8 @@ app.get('/cocktail', async (req, res) => {
     }
 })
 
-app.get('/sendtext', async (req, res) => {
-    
-})
+const textRouter = require('./routes/sendtext');
+app.use('/sendtext', textRouter);
 
 app.listen(3000, () => console.log('Listening to port 3000'));
 module.exports = {app};

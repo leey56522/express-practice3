@@ -1,3 +1,4 @@
+require('dotenv').config()
 const app = require('./server').app;
 const assert = require('chai').assert;
 const chai = require('chai');
@@ -8,7 +9,7 @@ chai.should();
 
 describe('Cocktail', () => {
     describe('GET', () => {
-        
+
         // Gets 200
         it('GET', (done) => {
             chai.request(app)
@@ -40,5 +41,4 @@ describe('Cocktail', () => {
                 })
         })
     })
-
 })
